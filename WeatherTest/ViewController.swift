@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var weeklySummaryLbl: UILabel!
     @IBOutlet weak var cityNameLbl: UILabel!
     @IBOutlet weak var currentTemeraturLbl: UILabel!
+    @IBOutlet weak var currentIcon: UIImageView!
     @IBOutlet weak var currentSummaryLbl: UILabel!
     @IBOutlet weak var dailyWeatherTableView: UITableView!
     @IBOutlet weak var nextCityButton: UIButton!
@@ -104,6 +105,7 @@ class ViewController: UIViewController {
             self.weeklySummaryLbl.text = self.weather[self.cityCount.cityChoise].daily.summary
             self.currentSummaryLbl.text = self.weather[self.cityCount.cityChoise].currently.summary
             self.currentTemeraturLbl.text = String(Int(self.weather[self.cityCount.cityChoise].currently.temperature!)) + "\u{00B0}"
+            self.currentIcon.image = UIImage(named: self.weather[self.cityCount.cityChoise].currently.icon! )
             self.dailyWeatherTableView.reloadData()
             
         }
@@ -143,19 +145,15 @@ class ViewController: UIViewController {
             case .right:
                 if cityCount.cityChoise != coordinateArray.count - 1 {
                     cityCount.cityChoise += 1
-                    print("Right: \(cityCount.cityChoise) array: \(coordinateArray.count)")
                     reloadView()
                 } else {
-                    print("Right stop: \(cityCount.cityChoise) array: \(coordinateArray.count)")
                     break
                 }
             case .left:
                 if cityCount.cityChoise > 0 {
                     cityCount.cityChoise -= 1
-                    print("Left: \(cityCount.cityChoise) array: \(coordinateArray.count)")
                     reloadView()
                 } else {
-                    print("Left stop: \(cityCount.cityChoise) array: \(coordinateArray.count)")
                     break
                 }
             default:

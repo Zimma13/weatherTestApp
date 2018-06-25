@@ -61,9 +61,7 @@
 		2EBED20B20DBBD420098ECBA = {
 			isa = PBXGroup;
 			children = (
-				2E5854DF20E05F8E00BC331C /* Disignable */,
-				2E7EDD6E20DC4A9100530DEA /* CoreData.swift */,
-				2EBED22C20DBCA930098ECBA /* StructAndClass.swift */,
+				2ECA87EB20E069EE003D0ECF /* Source */,
 				2EBED21620DBBD430098ECBA /* WeatherTest */,
 				2EBED21520DBBD430098ECBA /* Products */,
 			);
@@ -80,9 +78,7 @@
 		2EBED21620DBBD430098ECBA /* WeatherTest */ = {
 			isa = PBXGroup;
 			children = (
-				2EBED21720DBBD430098ECBA /* AppDelegate.swift */,
 				2EBED21920DBBD430098ECBA /* ViewController.swift */,
-				2EBED22E20DBE6220098ECBA /* DailyWeatherTableViewCell.swift */,
 				2EA4A72A20DFCBEF000BE897 /* AddCityViewController.swift */,
 				2EBED21B20DBBD430098ECBA /* Main.storyboard */,
 				2EBED22120DBBD450098ECBA /* Assets.xcassets */,
@@ -91,6 +87,18 @@
 				2EBED21E20DBBD430098ECBA /* WeatherTest.xcdatamodeld */,
 			);
 			path = WeatherTest;
+			sourceTree = "<group>";
+		};
+		2ECA87EB20E069EE003D0ECF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2E5854DF20E05F8E00BC331C /* Disignable */,
+				2EBED21720DBBD430098ECBA /* AppDelegate.swift */,
+				2EBED22C20DBCA930098ECBA /* StructAndClass.swift */,
+				2E7EDD6E20DC4A9100530DEA /* CoreData.swift */,
+				2EBED22E20DBE6220098ECBA /* DailyWeatherTableViewCell.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

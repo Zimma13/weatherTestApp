@@ -101,6 +101,7 @@ class AddCityViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func startButton(_ sender: Any) {
+        
         let coordinate: (city: String, lat: Double, lon: Double) = (self.cityName.long_name!, Double(self.cityFaind3.lat!), Double(self.cityFaind3.lng!))
         
         firstVC.coordinateArray.insert(coordinate, at: 0)
