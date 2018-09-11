@@ -104,8 +104,8 @@ class ViewController: UIViewController {
             self.cityNameLbl.text = self.coordinateArray[self.cityCount.cityChoise].city
             self.weeklySummaryLbl.text = self.weather[self.cityCount.cityChoise].daily.summary
             self.currentSummaryLbl.text = self.weather[self.cityCount.cityChoise].currently.summary
-            self.currentTemeraturLbl.text = String(Int(self.weather[self.cityCount.cityChoise].currently.temperature!)) + "\u{00B0}"
-            self.currentIcon.image = UIImage(named: self.weather[self.cityCount.cityChoise].currently.icon! )
+            self.currentTemeraturLbl.text = String(Int(self.weather[self.cityCount.cityChoise].currently.temperature)) + "\u{00B0}"
+            self.currentIcon.image = UIImage(named: self.weather[self.cityCount.cityChoise].currently.icon )
             self.dailyWeatherTableView.reloadData()
             
         }
@@ -193,12 +193,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd.MM"
-            let dat = dateFormatter.string(from: Date(timeIntervalSince1970: weather[cityCount.cityChoise].daily.data[indexPath.row].time!))
+            let dat = dateFormatter.string(from: Date(timeIntervalSince1970: weather[cityCount.cityChoise].daily.data[indexPath.row].time))
             
             cell.dataLbl.text = dat
             cell.temperaturLbl.text = weather[cityCount.cityChoise].daily.data[indexPath.row].tempLowHigh
             cell.summaryLbl.text = weather[cityCount.cityChoise].daily.data[indexPath.row].summary
-            cell.iconLbl.image = UIImage(named: weather[cityCount.cityChoise].daily.data[indexPath.row].icon!)
+            cell.iconLbl.image = UIImage(named: weather[cityCount.cityChoise].daily.data[indexPath.row].icon)
         }
         return cell
     }
